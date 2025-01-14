@@ -1,0 +1,45 @@
+[project]
+name = "flask-celery"
+version = "0.1.0"
+description = "A basic Flask API with Celery integration"
+authors = [
+  { name = "Bradley Smith", email = "bssmith925@gmail.com"},
+]
+readme = "README.md"
+license = "MIT"
+dependencies = [
+  "alchemical",
+  "alembic",
+  "apifairy",
+  "celery",
+  "faker",
+  "flask",
+  "flask-cors",
+  "flask-httpauth",
+  "flask-mail",
+  "flask-marshmallow",
+  "flask-sqlalchemy",
+  "gunicorn",
+  "marshmallow-sqlalchemy",
+  "pyjwt",
+  "python-dotenv",
+  "requests",
+  "psycopg2-binary"
+  
+]
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "pytest",
+    "pytest-cov",
+    "tox",
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+
+[tool.hatch.envs.dev]
+type = "virtual"
